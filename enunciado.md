@@ -1,4 +1,4 @@
-<img src="images/pyAscensores.png" width="40%" align="right"/>
+<img src="images/pyAscensores.png" width="30%" align="right"/>
 
 # pyAscensores
 
