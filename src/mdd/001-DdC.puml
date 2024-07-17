@@ -1,0 +1,53 @@
+@startuml
+
+skinparam class {
+    BackgroundColor LightYellow
+    BorderColor Black
+    ArrowColor Black
+}
+
+class Universidad {
+  nombre
+}
+
+class Edificio {
+  nombre
+  número de plantas
+}
+
+class Planta {
+  número
+  capacidad
+}
+
+class Ascensor {
+  capacidad
+  planta actual
+}
+
+class Persona {
+  destino
+  tiempo de estancia
+}
+
+class HorarioDiario {
+  fecha
+}
+
+class EventoAcademico {
+  nombre
+  horario
+  ubicación
+}
+
+Universidad "1" -- "1..*" Edificio : contiene
+Edificio "1" -- "1..*" Planta : tiene
+Edificio "1" -- "1..*" Ascensor : posee
+Planta "1" -- "0..*" Persona : alberga
+Ascensor "1" -- "0..*" Persona : transporta
+Persona -- Planta : se mueve entre >
+Universidad -- HorarioDiario : sigue
+HorarioDiario "1" -- "0..*" EventoAcademico : incluye
+Persona "0..*" -- "0..*" EventoAcademico : asiste a >
+
+@enduml

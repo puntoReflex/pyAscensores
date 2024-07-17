@@ -1,0 +1,82 @@
+@startuml
+
+skinparam object {
+    BackgroundColor LightBlue
+    BorderColor Black
+    ArrowColor Black
+}
+
+object "uneatlantico : Universidad" as uneatlantico {
+    nombre = "Universidad Europea del Atlántico"
+}
+
+object "edificioA : Edificio" as edificioA {
+    nombre = "Edificio A"
+    número de plantas = 5
+}
+
+object "planta2 : Planta" as planta2 {
+    número = 2
+    capacidad = 100
+}
+
+object "planta3 : Planta" as planta3 {
+    número = 3
+    capacidad = 80
+}
+
+object "ascensor1 : Ascensor" as ascensor1 {
+    capacidad = 8
+    planta actual = 2
+}
+
+object "ascensor2 : Ascensor" as ascensor2 {
+    capacidad = 8
+    planta actual = 4
+}
+
+object "ascensor3 : Ascensor" as ascensor3 {
+    capacidad = 8
+    planta actual = 1
+}
+
+object "estudiante1 : Persona" as estudiante1 {
+    destino = 3
+    tiempo de estancia = 120
+}
+
+object "estudiante2 : Persona" as estudiante2 {
+    destino = 2
+    tiempo de estancia = 60
+}
+
+object "estudiante3 : Persona" as estudiante3 {
+    destino = 4
+    tiempo de estancia = 90
+}
+
+object "horario : HorarioDiario" as horario {
+    fecha = "17/07/2024"
+}
+
+object "clase_innovacion : EventoAcademico" as clase_innovacion {
+    nombre = "Seminario de Innovación Tecnológica"
+    horario = "10:00 - 12:00"
+    ubicación = "Planta 3, Aula 302"
+}
+
+uneatlantico -- edificioA
+edificioA -- planta2
+edificioA -- planta3
+edificioA -- ascensor1
+edificioA -- ascensor2
+edificioA -- ascensor3
+planta2 -- estudiante2
+planta3 -- estudiante1
+ascensor1 -- estudiante1
+ascensor2 -- estudiante3
+uneatlantico -- horario
+horario -- clase_innovacion
+estudiante1 -- clase_innovacion
+
+@enduml
