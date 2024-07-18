@@ -5,7 +5,7 @@
 <div align=center>
 
 |![](/images/modelosUML/src/mdd/001-DdC.svg)|![](/images/modelosUML/src/mdd/001-DdO.svg)|
-|-|-|
+|:-:|:-:|
 |DdC|DdO|
 
 </div>
