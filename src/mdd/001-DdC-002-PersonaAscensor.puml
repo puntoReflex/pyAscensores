@@ -1,0 +1,13 @@
+@startuml
+
+object Persona
+object Ascensor
+
+Persona -r-> Ascensor : solicitarAperturaPuertas()
+Persona --> Ascensor : seleccionarDestino(plantaDestino)
+Ascensor --> Persona : confirmarPuertasAbiertas()
+Ascensor --> Persona : notificarLlegadaDestino()
+Persona --> Ascensor : solicitarAperturaPuertas()
+Ascensor --> Persona : confirmarPuertasAbiertas()
+
+@enduml

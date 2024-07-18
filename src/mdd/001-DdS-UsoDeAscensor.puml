@@ -1,0 +1,46 @@
+@startuml
+
+actor Persona
+participant Edificio
+participant Ascensor
+
+Persona -> Edificio: llamarAscensor(plantaActual)
+activate Edificio
+
+Edificio -> Ascensor: obtenerPosicion()
+activate Ascensor
+Ascensor --> Edificio: informarPosicion(plantaActual)
+deactivate Ascensor
+
+Edificio -> Ascensor: moverA(plantaActual)
+activate Ascensor
+Ascensor --> Edificio: confirmarLlegada()
+deactivate Ascensor
+
+Edificio --> Persona: notificarLlegadaAscensor()
+deactivate Edificio
+
+Persona -> Ascensor: solicitarAperturaPuertas()
+activate Ascensor
+Ascensor --> Persona: confirmarPuertasAbiertas()
+
+note right of Persona: Persona entra al ascensor
+
+Persona -> Ascensor: seleccionarDestino(plantaDestino)
+
+Ascensor -> Edificio: registrarMovimiento(plantaDestino)
+activate Edificio
+Edificio --> Ascensor: confirmarRegistro()
+deactivate Edificio
+
+Ascensor -> Ascensor: moverA(plantaDestino)
+
+Ascensor --> Persona: notificarLlegadaDestino()
+Persona -> Ascensor: solicitarAperturaPuertas()
+Ascensor --> Persona: confirmarPuertasAbiertas()
+
+note right of Persona: Persona sale del ascensor
+
+deactivate Ascensor
+
+@enduml

@@ -1,0 +1,14 @@
+@startuml
+
+
+object Edificio
+object Ascensor
+
+Edificio -r-> Ascensor : obtenerPosicion()
+Ascensor --> Edificio : informarPosicion(plantaActual)
+Edificio --> Ascensor : moverA(plantaActual)
+Ascensor --> Edificio : confirmarLlegada()
+Edificio --> Ascensor : confirmarRegistro()
+Ascensor --> Edificio : registrarMovimiento(plantaDestino)
+
+@enduml

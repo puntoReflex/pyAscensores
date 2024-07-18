@@ -1,0 +1,32 @@
+@startuml
+
+[*] --> Parado : Inicialización
+
+state Parado
+state Subiendo
+state Bajando
+state DetenidoTemporalmente
+' state EnMantenimiento
+
+Parado --> Parado 
+Parado -r-> Subiendo
+Parado -l-> Bajando
+
+Subiendo --> DetenidoTemporalmente 
+DetenidoTemporalmente --> Subiendo 
+DetenidoTemporalmente --> Parado 
+
+Bajando --> DetenidoTemporalmente
+DetenidoTemporalmente --> Bajando
+DetenidoTemporalmente --> Parado 
+
+Subiendo -l-> Parado 
+Bajando -r-> Parado 
+
+' Parado --> EnMantenimiento : Inicio de mantenimiento programado
+' EnMantenimiento --> Parado : Fin de mantenimiento
+' Subiendo --> EnMantenimiento : Fallo detectado
+' Bajando --> EnMantenimiento : Fallo detectado
+' DetenidoTemporalmente --> EnMantenimiento : Fallo detectado
+
+@enduml

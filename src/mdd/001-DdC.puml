@@ -1,11 +1,5 @@
 @startuml
 
-skinparam class {
-    BackgroundColor LightYellow
-    BorderColor Black
-    ArrowColor Black
-}
-
 class Universidad {
   nombre
 }

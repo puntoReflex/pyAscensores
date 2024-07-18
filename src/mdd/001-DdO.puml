@@ -1,10 +1,5 @@
 @startuml
 
-skinparam object {
-    BackgroundColor LightBlue
-    BorderColor Black
-    ArrowColor Black
-}
 
 object "uneatlantico : Universidad" as uneatlantico {
     nombre = "Universidad Europea del Atlántico"

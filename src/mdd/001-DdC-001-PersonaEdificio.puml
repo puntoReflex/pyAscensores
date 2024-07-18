@@ -1,0 +1,9 @@
+@startuml
+
+object Persona
+object Edificio
+
+Persona -r-> Edificio : llamarAscensor(plantaActual)
+Edificio --> Persona : notificarLlegadaAscensor()
+
+@enduml

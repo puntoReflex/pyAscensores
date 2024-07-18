@@ -1,0 +1,18 @@
+@startuml
+
+[*] --> EntrandoAlEdificio
+
+state EntrandoAlEdificio
+state EsperandoAscensor
+state DentroDelAscensor
+state EnPlantaDestino
+state SaliendoDelEdificio
+
+EntrandoAlEdificio --> EsperandoAscensor
+EsperandoAscensor --> DentroDelAscensor
+DentroDelAscensor --> EnPlantaDestino
+EnPlantaDestino --> EsperandoAscensor
+EnPlantaDestino --> SaliendoDelEdificio
+SaliendoDelEdificio --> [*]
+
+@enduml
