@@ -1,0 +1,58 @@
+@startuml
+
+object "uneatlantico : Universidad" as uneatlantico {
+    nombre = "Universidad Europea del Atlántico"
+}
+
+object "edificioA : Edificio" as edificioA {
+    nombre = "Edificio A"
+    numeroPlantas = 5
+}
+
+object "planta2 : Planta" as planta2 {
+    numero = 2
+    capacidad = 100
+}
+
+object "planta3 : Planta" as planta3 {
+    numero = 3
+    capacidad = 80
+}
+
+object "ascensor1 : Ascensor" as ascensor1 {
+    numero = 1
+    capacidad = 8
+    plantaActual = planta2
+}
+
+object "estudiante1 : Persona" as estudiante1 {
+    destino = planta3
+    tiempoLlegada = "09:00"
+    duracionEstancia = 120
+    listoParaMover = false
+}
+
+object "estudiante2 : Persona" as estudiante2 {
+    destino = planta2
+    tiempoLlegada = "08:30"
+    duracionEstancia = 60
+    listoParaMover = true
+}
+
+object "profesor : Persona" as profesor {
+    destino = planta1
+    tiempoLlegada = "08:45"
+    duracionEstancia = 90
+    listoParaMover = false
+}
+
+uneatlantico -- edificioA : contiene
+edificioA -- planta2 : tiene
+edificioA -- planta3 : tiene
+edificioA -- ascensor1 : controla
+planta2 -- estudiante2 : alberga
+planta3 -- estudiante1 : alberga
+planta3 -- profesor : alberga
+ascensor1 -- estudiante2 : transporta
+
+@enduml

@@ -1,0 +1,52 @@
+@startuml
+
+class Universidad {
+  - nombre
+}
+
+class Edificio {
+  - nombre
+  - numeroPlantas
+  + llamarAscensor(plantaActual)
+  + obtenerPosicion(ascensor)
+  + moverAscensor(ascensor, planta)
+  + notificarLlegadaAscensor(persona)
+  + confirmarRegistroMovimiento(ascensor)
+}
+
+class Planta {
+  - numero
+  - capacidad
+}
+
+class Ascensor {
+  - numero
+  - capacidad
+  - plantaActual
+  + informarPosicion()
+  + confirmarLlegada()
+  + abrirPuertas()
+  + cerrarPuertas()
+  + moverA(planta)
+  + registrarMovimiento(planta)
+  + notificarLlegadaDestino()
+}
+
+class Persona {
+  - destino
+  - tiempoLlegada
+  - duracionEstancia
+  - listoParaMover
+  + actualizarEstado()
+  + solicitarAperturaPuertas()
+  + seleccionarDestino(planta)
+}
+
+Universidad "1" -- "1..*" Edificio : contiene
+Edificio "1" -- "1..*" Planta : tiene
+Edificio "1" -- "1..*" Ascensor : controla
+Planta "1" -- "0..*" Persona : alberga
+Ascensor "1" -- "0..*" Persona : transporta
+Persona -- Planta : se mueve entre >
+
+@enduml
