@@ -1,0 +1,30 @@
+@startuml
+
+left to right direction
+actor Persona
+actor "Sistema de Control" as Sistema
+
+rectangle "Sistema de Ascensores" {
+  usecase "Llegar al Edificio" as UC1
+  usecase "Llamar Ascensor" as UC2
+  usecase "Usar Ascensor para Subir" as UC3
+  usecase "Permanecer en Planta Destino" as UC4
+  usecase "Usar Ascensor para Bajar" as UC5
+  usecase "Salir del Edificio" as UC6
+  usecase "Asignar Ascensor a Llamada" as UC7
+}
+
+Persona --> UC1
+Persona --> UC2
+Persona --> UC3
+Persona --> UC4
+Persona --> UC5
+Persona --> UC6
+
+Sistema --> UC7
+
+UC2 ..> UC7 : <<include>>
+UC3 ..> UC7 : <<include>>
+UC5 ..> UC7 : <<include>>
+
+@enduml
