@@ -1,0 +1,11 @@
+@startuml
+
+Universidad -- Edificio : contiene
+Edificio -- Planta  : tiene
+Edificio --  Ascensor : posee
+Planta -- Persona : alberga
+Ascensor -- Persona : transporta
+Persona -- Planta : se mueve entre >
+Universidad -- HorarioDiario : sigue
+
+@enduml

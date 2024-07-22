@@ -1,0 +1,10 @@
+@startuml
+
+Universidad -- Edificio
+Edificio -- Planta
+Edificio -- Ascensor
+Planta -- Persona
+Ascensor -- Persona
+Universidad -- HorarioDiario
+
+@enduml

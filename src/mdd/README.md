@@ -4,6 +4,12 @@
 
 ## Diagramas 
 
+### Iteración "cero"
+
+||||
+|:-:|:-:|:-:|
+|![](/images/modelosUML/src/mdd/000-DdC-000.svg)|![](/images/modelosUML/src/mdd/000-DdC-001.svg)|![](/images/modelosUML/src/mdd/000-DdC-002.svg)|
+
 ### Primera iteración
 
 <div align=center>
@@ -30,9 +36,9 @@
 
 |||
 |-|:-:|
-||![](/images/modelosUML/src/mdd/001-DdC-001-PersonaEdificio.svg)
-||![](/images/modelosUML/src/mdd/001-DdC-002-PersonaAscensor.svg)
-||![](/images/modelosUML/src/mdd/001-DdC-003-EdificioAscensor.svg)|
+||![](/images/modelosUML/src/mdd/001-DdCol-001-PersonaEdificio.svg)
+||![](/images/modelosUML/src/mdd/001-DdCol-002-PersonaAscensor.svg)
+||![](/images/modelosUML/src/mdd/001-DdCol-003-EdificioAscensor.svg)|
 
 </div>
 
