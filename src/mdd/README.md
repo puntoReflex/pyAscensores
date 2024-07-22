@@ -72,3 +72,11 @@
 |![](/images/modelosUML/src/mdd/003-DdC.svg)|![](/images/modelosUML/src/mdd/003-DdO.svg)|
 |:-:|:-:|
 |DdC|DdO|
+
+### Cuarta iteración
+
+Intención de uso de ascensor
+
+|![](/images/modelosUML/src/mdd/004-DdC.svg)|![](/images/modelosUML/src/mdd/004-DdO.svg)|
+|:-:|:-:|
+|DdC|DdO|
